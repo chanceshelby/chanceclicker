@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Chance Clicker</title>
+</head>
+
+<body>
+<style>
+.button {
+	background: url(chance.png);
+}
+</style>
+
+<font face="times">
+<center>
+<br><br>
+<br><br>
+<br><br>
+
+<body bgcolor=”blue”>
+
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+		  if (localStorage.clickcount >= 100) {
+			localStorage.clickcount = Number(localStorage.clickcount)+1;
+			}
+			if (localStorage.clickcount >= 500) {
+			localStorage.clickcount = Number(localStorage.clickcount)+1;
+			}
+			if (localStorage.clickcount >= 1000) {
+			localStorage.clickcount = Number(localStorage.clickcount)+2;
+			}
+			if (localStorage.clickcount >= 4000) {
+			localStorage.clickcount = Number(localStorage.clickcount)+4;
+			}
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "<h1>" + localStorage.clickcount + " chances";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>
+<body>
+	<style>
+		.button {
+			width: 15%;
+		}
+		</style>
+<p><input type="image" src="chance.png" onclick="clickCounter()" type="button" class="button"><h1></button></p></h1>
+<font color="#fff">
+<div id="result"></div>
+	
+
+</body></html>
+
+
+    <div>
+<div>
+
+
